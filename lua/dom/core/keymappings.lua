@@ -3,6 +3,9 @@
 local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
+-- Set <leader> key to <Space> --
+vim.g.mapleader = ' '
+
 -- Normal Mode --
 
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -21,6 +24,12 @@ keymap("n", "Qa", ":wqa<CR>", opts)
 keymap("n", "QA", ":qa!<CR>", opts)
 
 -- Insert Mode --
+
+  -- vim-fugitive --
+  keymap({"n"}, "<leader>ga", ":Git add *<CR>", opts)
+  keymap({"n"}, "<leader>gc", ":Git commit<CR>", opts)
+  keymap({"n"}, "<leader>gp", ":Git push<CR>", opts)
+  keymap({"n"}, "<leader>gs", ":Git stash<CR>", opts)
 
 -- Shared --
 

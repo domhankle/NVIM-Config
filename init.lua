@@ -1,4 +1,2 @@
-require("dom.lazy")
 require("dom.core")
-
-
+require("dom.lazy")
