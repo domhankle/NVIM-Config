@@ -25,8 +25,12 @@ keymap("n", "QA", ":qa!<CR>", opts)
 -- Shared --
 
 keymap({"n", "i"}, "<C-s>", ":w<CR>", opts)
-  
+
   -- nvim-tree --
 
-  keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
+  keymap({"n", "i"}, "<C-n>", ":NvimTreeToggle<CR>", opts)
 
+  -- telescope --
+
+  keymap({"n", "i"}, "<C-f>", ":Telescope live_grep<CR>", opts)
+  keymap({"n", "i"}, "<C-p>", ":Telescope find_files<CR>", opts)
