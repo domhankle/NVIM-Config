@@ -33,7 +33,7 @@ keymap("n", "QA", ":qa!<CR>", opts)
 
 -- Shared --
 
-keymap({"n", "i"}, "<C-s>", ":w<CR>", opts)
+keymap({"n", "i"}, "<C-s>", "<ESC>:w<CR>", opts)
 
   -- nvim-tree --
 
