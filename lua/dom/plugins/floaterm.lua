@@ -4,13 +4,15 @@ return {
 
 
         vim.g.floaterm_wintype = 'split'
+        vim.g.floaterm_height = 0.25
 
         local keymap = vim.keymap
 
-        keymap.set("n", "<C-t>o", "<cmd>FloatermNew<CR>", { desc = "Create a new terminal" })
-        keymap.set("n", "<C-t>t", "<cmd>FloatermToggle<CR>", { desc = "Toggle the terminal" })
-        keymap.set("n", "<C-t>n", "<cmd>FloatermNext<CR>", { desc = "Go to next terminal" })
-        keymap.set("n", "<C-t>p", "<cmd>FloatermPrev<CR>", { desc = "Go to previous terminal" })
+        keymap.set("n", "<leader>To", "<cmd>FloatermNew<CR><C-\\><C-n>", { desc = "Create a new terminal" })
+        keymap.set("n", "<leader>Tt", "<cmd>FloatermToggle<CR><C-\\><C-n>", { desc = "Toggle the terminal" })
+        keymap.set("n", "<leader>Tn", "<cmd>FloatermNext<CR><C-\\><C-n>", { desc = "Go to next terminal" })
+        keymap.set("n", "<leader>Tp", "<cmd>FloatermPrev<CR><C-\\><C-n>", { desc = "Go to previous terminal" })
+        keymap.set("t", "<ESC>", "<C-\\><C-n>", { desc = "Go to normal mode from terminal mode" })
 
 
     end
