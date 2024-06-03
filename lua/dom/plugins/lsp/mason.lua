@@ -11,7 +11,7 @@ return {
     mason.setup()
 
     mason_lspconfig.setup({
-      ensure_installed = { 
+      ensure_installed = {
         "tsserver",
         "html",
         "cssls",
@@ -21,7 +21,8 @@ return {
         "graphql",
         "emmet_ls",
         "prismals",
-        "pyright", 
+        "pyright",
+        "angularls"
       },
     })
   end,
