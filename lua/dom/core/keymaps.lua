@@ -14,10 +14,18 @@ keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })
 keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })
 keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" })
 
-keymap.set({"n", "i"}, "<C-Up>", "<cmd>resize +2<CR>", { desc = "Resize window shorter from bottom" })
-keymap.set({"n", "i"}, "<C-Down>", "<cmd>resize -2<CR>", { desc = "Resize window taller from bottom" })
-keymap.set({"n", "i"}, "<C-Right>", "<cmd>vertical resize -2<CR>", { desc = "Resize window wider from right" })
-keymap.set({"n", "i"}, "<C-Left>", "<cmd>vertical resize +2<CR>", { desc = "Resize window wider from left" })
+keymap.set({"n", "i", "t"}, "<C-Up>", "<cmd>resize +2<CR>", { desc = "Resize window shorter from bottom" })
+keymap.set({"n", "i", "t"}, "<C-Down>", "<cmd>resize -2<CR>", { desc = "Resize window taller from bottom" })
+keymap.set({"n", "i", "t"}, "<C-Right>", "<cmd>vertical resize -2<CR>", { desc = "Resize window wider from right" })
+keymap.set({"n", "i", "t"}, "<C-Left>", "<cmd>vertical resize +2<CR>", { desc = "Resize window wider from left" })
+
+keymap.set("n", "<C-t>", "<cmd>terminal<CR>")
+keymap.set("t", "<ESC>", "<C-\\><C-n>")
+keymap.set("t", "<C-j>", "<C-\\><C-n><C-j>")
+keymap.set("t", "<C-h>", "<C-\\><C-n><C-h>")
+keymap.set("t", "<C-k>", "<C-\\><C-n><C-k>")
+keymap.set("t", "<C-l>", "<C-\\><C-n><C-l>")
+
 
 keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", {desc = "Open new tab" })
 keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", {desc = "Close current tab" })
