@@ -25,6 +25,7 @@ return {
 				"prismals",
 				"pyright",
 				"angularls",
+				"clangd",
 			},
 		})
 
@@ -33,8 +34,6 @@ return {
 				"prettier",
 				"stylua",
 				"isort",
-				"black",
-				"pylint",
 				"eslint_d",
 			},
 		})
